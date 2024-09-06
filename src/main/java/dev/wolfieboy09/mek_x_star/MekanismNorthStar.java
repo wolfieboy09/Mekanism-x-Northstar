@@ -2,6 +2,7 @@ package dev.wolfieboy09.mek_x_star;
 
 import com.mojang.logging.LogUtils;
 import dev.wolfieboy09.mek_x_star.registries.MNItems;
+import dev.wolfieboy09.mek_x_star.registries.MNModules;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -27,7 +28,7 @@ public class MekanismNorthStar {
         MinecraftForge.EVENT_BUS.register(this);
 
         MNItems.ITEMS.register(modEventBus);
-        // MNModules.MODULES.register(modEventBus);
+        MNModules.MODULES.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 

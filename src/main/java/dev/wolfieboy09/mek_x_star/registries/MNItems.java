@@ -10,7 +10,6 @@ import net.minecraftforge.registries.RegistryObject;
 public class MNItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MekanismNorthStar.MOD_ID);
 
-    public static final RegistryObject<Item> MODULE_SPACE_SUIT = ITEMS.register("module_space_suit",
-            () -> new ModuleSpaceSuitItem());
+    public static final RegistryObject<Item> MODULE_SPACE_SUIT = ITEMS.register("module_space_suit",() -> new Item(new Item.Properties()));
 
 }
