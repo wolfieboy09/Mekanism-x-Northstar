@@ -29,10 +29,6 @@ public class MekanismNorthStar {
 
         MNItems.ITEMS.register(modEventBus);
         MNModules.MODULES.register(modEventBus);
-
-        modEventBus.addListener(this::addCreative);
-
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

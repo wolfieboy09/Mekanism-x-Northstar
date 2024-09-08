@@ -20,7 +20,7 @@ public abstract class ItemTagMixin {
     }
 
     @Inject(method = "is(Lnet/minecraft/tags/TagKey;)Z", at=@At("HEAD"), cancellable = true)
-    private void injector(TagKey<Item> pTag, CallbackInfoReturnable<Boolean> cir) {
+    private void gaslightTheGameToThinkingThisDoesExist(TagKey<Item> pTag, CallbackInfoReturnable<Boolean> cir) {
         CompoundTag tag = mekanismXNorthstar$self().getTag();
         if (tag != null) {
             boolean isInstalled = tag.getBoolean("isSpaceModuleInstalled");
