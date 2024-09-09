@@ -1,7 +1,7 @@
 package dev.wolfieboy09.mek_x_star.registries;
 
-import dev.wolfieboy09.mek_x_star.modules.registry.ModuleOxygenTank;
-import dev.wolfieboy09.mek_x_star.modules.registry.ModuleSpaceSuit;
+import dev.wolfieboy09.mek_x_star.modules.ModuleOxygenTank;
+import dev.wolfieboy09.mek_x_star.modules.ModuleSpaceSuit;
 import mekanism.api.gear.ModuleData;
 import mekanism.api.providers.IItemProvider;
 import net.minecraft.world.item.Item;
