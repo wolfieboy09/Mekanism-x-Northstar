@@ -28,6 +28,6 @@ public class ModuleOxygenTank implements ICustomModule<ModuleOxygenTank> {
         ICustomModule.super.onRemoved(module, last);
         CompoundTag tag = new CompoundTag();
         tag.putBoolean(IS_INSTALLED_TAG_NAME, false);
-        module.getContainer().addTagElement(IS_INSTALLED_TAG_NAME, tag);
+        module.getContainer().setTag(tag);
     }
 }
