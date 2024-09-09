@@ -13,7 +13,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ItemStack.class)
 public abstract class ItemTagMixin {
-
     @Unique
     private ItemStack mekanismXNorthstar$self() {
         return (ItemStack) (Object) this;
@@ -24,7 +23,7 @@ public abstract class ItemTagMixin {
         CompoundTag tag = mekanismXNorthstar$self().getTag();
         if (tag != null) {
             boolean isInstalled = tag.getBoolean("isSpaceModuleInstalled");
-            boolean isBothInsulationInstalled = tag.getBoolean("isInsulationModuleInstalled");
+            // boolean isBothInsulationInstalled = tag.getBoolean("isInsulationModuleInstalled");
 
             if (pTag == NorthstarItemTags.INSULATING.tag && isInstalled) {
                 cir.setReturnValue(true);
@@ -32,13 +31,10 @@ public abstract class ItemTagMixin {
             if (pTag == NorthstarItemTags.OXYGEN_SEALING.tag && isInstalled) {
                 cir.setReturnValue(true);
             }
+            if (pTag == NorthstarItemTags.HEAT_RESISTANT.tag && isInstalled) {
+                cir.setReturnValue(true);
+            }
             if (pTag == NorthstarItemTags.OXYGEN_SOURCES.tag && tag.getBoolean("isOxygenTankInstalled")) {
-                cir.setReturnValue(true);
-            }
-            if (pTag == NorthstarItemTags.HEAT_RESISTANT.tag && isBothInsulationInstalled) {
-                cir.setReturnValue(true);
-            }
-            if (pTag == NorthstarItemTags.INSULATING.tag && isBothInsulationInstalled) {
                 cir.setReturnValue(true);
             }
         }
