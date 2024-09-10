@@ -14,6 +14,9 @@ public class MNEvents {
     @SubscribeEvent
     public static void interModEnqueueEvent(InterModEnqueueEvent event) {
         MekanismIMC.addMekaSuitModules(MNModules.MODULE_SPACE_SUIT.get());
+        MekanismIMC.addMekaSuitModules(MNModules.MODULE_SPACE_SUIT_INSULATION.get());
+        MekanismIMC.addMekaSuitModules(MNModules.MODULE_HEAT_RESISTANT.get());
         MekanismIMC.addMekaSuitBodyarmorModules(MNModules.MODULE_OXYGEN_TANK.get());
+
     }
 }
