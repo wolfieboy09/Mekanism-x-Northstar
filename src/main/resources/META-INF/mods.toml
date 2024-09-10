@@ -1,7 +1,7 @@
 modLoader="javafml" #mandatory
-loaderVersion="${loader_version_range}" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+loaderVersion="${loader_version_range}"
 license="${mod_license}"
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+issueTrackerURL="https://github.com/wolfieboy09/Mekanism-x-Northstar/issues"
 [[mods]]
 modId="mek_x_star"
 version="${mod_version}"
@@ -9,7 +9,7 @@ displayName="${mod_name}"
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 #logoFile="examplemod.png" #optional
-#credits="" #optional
+credits=""
 authors="${mod_authors}" #optional
 
 description='''${mod_description}'''
@@ -28,8 +28,15 @@ description='''${mod_description}'''
     side="BOTH"
 
 [[dependencies.mek_x_star]]
-modId="create"
+modId="mekanism"
 mandatory=true
-versionRange="[0.5.1.f,)"
+versionRange="[1.20.1-10.4.8.43,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.mek_x_star]]
+modId="northstar"
+mandatory=true
+versionRange="[0.1cb-1.20.1,)"
 ordering="NONE"
 side="BOTH"
