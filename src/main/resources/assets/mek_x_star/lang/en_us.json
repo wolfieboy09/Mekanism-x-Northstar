@@ -1,3 +1,6 @@
 {
-  "module.mek_x_star.module_space_suit": "Space Suit Module"
+  "module.mek_x_star.module_space_suit": "Space Suit Unit",
+  "module.mek_x_star.module_oxygen_tank": "Oxygen Tank Unit",
+  "description.mek_x_star.module_space_suit": "Turns the meka-suit into a space suit",
+  "description.mek_x_star.module_oxygen_tank": "Makes your body armor have an oxygen tank to breath from"
 }
