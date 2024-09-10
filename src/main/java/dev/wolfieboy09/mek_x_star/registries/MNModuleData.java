@@ -1,6 +1,6 @@
 package dev.wolfieboy09.mek_x_star.registries;
 
-import dev.wolfieboy09.mek_x_star.modules.ModuleHeatResistant;
+import dev.wolfieboy09.mek_x_star.modules.ModuleHeatResistive;
 import dev.wolfieboy09.mek_x_star.modules.ModuleOxygenTank;
 import dev.wolfieboy09.mek_x_star.modules.ModuleSpaceSuit;
 import dev.wolfieboy09.mek_x_star.modules.ModuleSpaceSuitInsulation;
@@ -34,8 +34,8 @@ public class MNModuleData {
                 }
             }));
 
-    public static final ModuleData<ModuleHeatResistant> HEAT_RESISTANT_MODULE_DATA = new ModuleData<>(
-            ModuleData.ModuleDataBuilder.custom(ModuleHeatResistant::new, new IItemProvider() {
+    public static final ModuleData<ModuleHeatResistive> HEAT_RESISTIVE_MODULE_DATA = new ModuleData<>(
+            ModuleData.ModuleDataBuilder.custom(ModuleHeatResistive::new, new IItemProvider() {
                 @Override
                 public @NotNull Item asItem() {
                     return MNItems.MODULE_HEAT_RESISTANT.get();
