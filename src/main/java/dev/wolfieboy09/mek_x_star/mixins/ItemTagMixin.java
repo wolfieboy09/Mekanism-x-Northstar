@@ -19,19 +19,16 @@ public abstract class ItemTagMixin {
     }
 
     @Inject(method = "is(Lnet/minecraft/tags/TagKey;)Z", at=@At("HEAD"), cancellable = true)
-    private void gaslightTheGameToThinkingThisDoesExist(TagKey<Item> pTag, CallbackInfoReturnable<Boolean> cir) {
+    private void gaslightMinecraft(TagKey<Item> pTag, CallbackInfoReturnable<Boolean> cir) {
         CompoundTag tag = mekanismXNorthstar$self().getTag();
         if (tag != null) {
-            boolean isInstalled = tag.getBoolean("isSpaceModuleInstalled");
-            // boolean isBothInsulationInstalled = tag.getBoolean("isInsulationModuleInstalled");
-
-            if (pTag == NorthstarItemTags.INSULATING.tag && isInstalled) {
+            if (pTag == NorthstarItemTags.INSULATING.tag && tag.getBoolean("isInsulated")) {
                 cir.setReturnValue(true);
             }
-            if (pTag == NorthstarItemTags.OXYGEN_SEALING.tag && isInstalled) {
+            if (pTag == NorthstarItemTags.OXYGEN_SEALING.tag && tag.getBoolean("isSpaceModuleInstalled")) {
                 cir.setReturnValue(true);
             }
-            if (pTag == NorthstarItemTags.HEAT_RESISTANT.tag && isInstalled) {
+            if (pTag == NorthstarItemTags.HEAT_RESISTANT.tag && tag.getBoolean("isHeatResistant")) {
                 cir.setReturnValue(true);
             }
             if (pTag == NorthstarItemTags.OXYGEN_SOURCES.tag && tag.getBoolean("isOxygenTankInstalled")) {
