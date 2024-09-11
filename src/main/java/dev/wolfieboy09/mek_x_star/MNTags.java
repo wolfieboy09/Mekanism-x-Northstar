@@ -13,6 +13,6 @@ public class MNTags {
 
         public static final TagKey<Item> IS_SPACE_SUIT = tag("is_space_suit");
         public static final TagKey<Item> HEAT_RESISTANT = tag("heat_resistant");
-        public static final TagKey<Item> INSULATING = tag("oxygen_sources");
+        public static final TagKey<Item> INSULATING = tag("insulating");
     }
 }
