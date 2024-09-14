@@ -11,8 +11,7 @@ public class MNTags {
             return ItemTags.create(new ResourceLocation(MekanismNorthStar.MOD_ID, name));
         }
 
-        public static final TagKey<Item> IS_SPACE_SUIT = tag("is_space_suit");
-        public static final TagKey<Item> HEAT_RESISTANT = tag("heat_resistant");
+        public static final TagKey<Item> HEAT_RESISTIVE = tag("heat_resistive");
         public static final TagKey<Item> INSULATING = tag("insulating");
     }
 }
