@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": {
+      "tag": "mek_x_star:insulating"
+    },
+    "M": {
+      "item": "mekanism:module_base"
+    },
+    "S": {
+      "item": "mekanism:hdpe_sheet"
+    }
+  },
+  "pattern": [
+    "ISI",
+    "IMI",
+    "SSS"
+  ],
+  "result": {
+    "item": "mekanism:module_space_suit_insulation"
+  }
+}
