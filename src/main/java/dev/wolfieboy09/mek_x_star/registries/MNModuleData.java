@@ -16,7 +16,8 @@ public class MNModuleData {
                 public @NotNull Item asItem() {
                     return MNItems.MODULE_SPACE_SUIT.get();
                 }
-            }));
+            }).maxStackSize(1)
+    );
 
     public static final ModuleData<ModuleOxygenTank> OXYGEN_TANK_MODULE_DATA = new ModuleData<>(
             ModuleData.ModuleDataBuilder.custom(ModuleOxygenTank::new, new IItemProvider() {
@@ -24,7 +25,8 @@ public class MNModuleData {
                 public @NotNull Item asItem() {
                     return MNItems.MODULE_OXYGEN_TANK.get();
                 }
-            }));
+            }).maxStackSize(1)
+    );
 
     public static final ModuleData<ModuleSpaceSuitInsulation> SPACE_SUIT_INSULATION_MODULE_DATA = new ModuleData<>(
             ModuleData.ModuleDataBuilder.custom(ModuleSpaceSuitInsulation::new, new IItemProvider() {
@@ -32,7 +34,8 @@ public class MNModuleData {
                 public @NotNull Item asItem() {
                     return MNItems.MODULE_SPACE_SUIT_INSULATION.get();
                 }
-            }));
+            }).maxStackSize(1)
+    );
 
     public static final ModuleData<ModuleHeatResistive> HEAT_RESISTIVE_MODULE_DATA = new ModuleData<>(
             ModuleData.ModuleDataBuilder.custom(ModuleHeatResistive::new, new IItemProvider() {
@@ -40,6 +43,7 @@ public class MNModuleData {
                 public @NotNull Item asItem() {
                     return MNItems.MODULE_HEAT_RESISTANT.get();
                 }
-            }));
+            }).maxStackSize(1)
+    );
 }
 
