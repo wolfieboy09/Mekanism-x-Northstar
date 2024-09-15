@@ -6,5 +6,6 @@
   "description.mek_x_star.module_space_suit": "Turns the meka-suit into a space suit",
   "description.mek_x_star.module_oxygen_tank": "Makes your body armor have an oxygen tank to breath from",
   "description.mek_x_star.module_space_suit_insulation": "Adds insulation to the meka-suit so you don't freeze",
-  "description.mek_x_star.module_heat_resistant": "Adds heat resistant to the meka-suit for hot planets"
+  "description.mek_x_star.module_heat_resistant": "Adds heat resistant to the meka-suit for hot planets",
+  "creativetab.mek_x_star.name": "Mekanism x Create: Northstar Items"
 }
