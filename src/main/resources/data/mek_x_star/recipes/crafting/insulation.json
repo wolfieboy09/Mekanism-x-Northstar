@@ -1,17 +1,24 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "I": {
-      "item": "create:crushed_iron"
+      "tag": "mek_x_star:crushed_wool"
     },
     "C": {
-      "tag": "mek_x_star:crushed_wool"
+      "item": "create:crushed_raw_copper"
+    },
+    "W": {
+      "item": "create:crushed_raw_iron"
     }
   },
   "pattern": [
-    "ICI"
+    " C ",
+    "IWI",
+    " C "
   ],
   "result": {
     "item": "mek_x_star:insulation"
-  }
+  },
+  "show_notification": true
 }
