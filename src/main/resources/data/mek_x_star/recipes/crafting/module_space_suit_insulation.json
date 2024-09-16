@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "I": {
       "tag": "mek_x_star:insulating"
@@ -18,7 +17,6 @@
     "SSS"
   ],
   "result": {
-    "item": "mekanism:module_space_suit_insulation"
-  },
-  "show_notification": true
+    "item": "mek_x_star:module_space_suit_insulation"
+  }
 }

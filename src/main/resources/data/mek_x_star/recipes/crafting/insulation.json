@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "I": {
       "tag": "mek_x_star:crushed_wool"
@@ -19,6 +18,5 @@
   ],
   "result": {
     "item": "mek_x_star:insulation"
-  },
-  "show_notification": true
+  }
 }
