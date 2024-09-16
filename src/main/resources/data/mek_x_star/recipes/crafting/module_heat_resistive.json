@@ -9,12 +9,15 @@
     },
     "S": {
       "item": "mekanism:hdpe_sheet"
+    },
+    "P": {
+      "tag": "forge:plates/iron"
     }
   },
   "pattern": [
     "III",
     "IMI",
-    "SSS"
+    "PSP"
   ],
   "result": {
     "item": "mek_x_star:module_heat_resistive"

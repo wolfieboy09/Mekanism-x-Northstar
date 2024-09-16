@@ -10,12 +10,12 @@ public class ModuleSpaceSuitInsulation implements ICustomModule<ModuleSpaceSuitI
     @Override
     public void onAdded(IModule<ModuleSpaceSuitInsulation> module, boolean first) {
         ICustomModule.super.onAdded(module, first);
-        module.getContainer().getOrCreateTag().putBoolean("isInsulated", true);
+        module.getContainer().getOrCreateTag().putBoolean("isInsulationModuleActive", true);
     }
 
     @Override
     public void onRemoved(IModule<ModuleSpaceSuitInsulation> module, boolean last) {
         ICustomModule.super.onRemoved(module, last);
-        module.getContainer().getOrCreateTag().putBoolean("isInsulated", false);
+        module.getContainer().getOrCreateTag().putBoolean("isInsulationModuleActive", false);
     }
 }

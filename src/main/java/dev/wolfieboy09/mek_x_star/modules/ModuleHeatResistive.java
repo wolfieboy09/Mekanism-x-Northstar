@@ -10,12 +10,12 @@ public class ModuleHeatResistive implements ICustomModule<ModuleHeatResistive> {
     @Override
     public void onAdded(IModule<ModuleHeatResistive> module, boolean first) {
         ICustomModule.super.onAdded(module, first);
-        module.getContainer().getOrCreateTag().putBoolean("isHeatResistant", true);
+        module.getContainer().getOrCreateTag().putBoolean("isInsulationModuleActive", true);
     }
 
     @Override
     public void onRemoved(IModule<ModuleHeatResistive> module, boolean last) {
         ICustomModule.super.onRemoved(module, last);
-        module.getContainer().getOrCreateTag().putBoolean("isHeatResistant", false);
+        module.getContainer().getOrCreateTag().putBoolean("isHeatResistiveActive", false);
     }
 }

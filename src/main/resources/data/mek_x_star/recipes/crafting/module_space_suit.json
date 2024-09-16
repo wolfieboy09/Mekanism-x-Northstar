@@ -12,14 +12,17 @@
     },
     "P": {
       "tag": "forge:plates/iron"
+    },
+    "E": {
+      "item": "mekanism:alloy_reinforced"
     }
   },
   "pattern": [
-    "III",
+    "EIE",
     "IMI",
     "PSP"
   ],
   "result": {
-    "item": "mek_x_star:module_space_suit_insulation"
+    "item": "mek_x_star:module_space_suit"
   }
 }

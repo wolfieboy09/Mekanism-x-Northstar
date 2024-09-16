@@ -22,16 +22,16 @@ public abstract class ItemTagMixin {
     private void gaslightMinecraft(TagKey<Item> pTag, CallbackInfoReturnable<Boolean> cir) {
         CompoundTag tag = mekanismXNorthstar$self().getTag();
         if (tag != null) {
-            if (pTag == NorthstarItemTags.INSULATING.tag && tag.getBoolean("isInsulated")) {
+            if (pTag == NorthstarItemTags.INSULATING.tag && tag.getBoolean("isInsulationModuleActive")) {
                 cir.setReturnValue(true);
             }
-            if (pTag == NorthstarItemTags.OXYGEN_SEALING.tag && tag.getBoolean("isSpaceModuleInstalled")) {
+            if (pTag == NorthstarItemTags.OXYGEN_SEALING.tag && tag.getBoolean("isSpaceModuleActive")) {
                 cir.setReturnValue(true);
             }
-            if (pTag == NorthstarItemTags.HEAT_RESISTANT.tag && tag.getBoolean("isHeatResistant")) {
+            if (pTag == NorthstarItemTags.HEAT_RESISTANT.tag && tag.getBoolean("isInsulationModuleActive")) {
                 cir.setReturnValue(true);
             }
-            if (pTag == NorthstarItemTags.OXYGEN_SOURCES.tag && tag.getBoolean("isOxygenTankInstalled")) {
+            if (pTag == NorthstarItemTags.OXYGEN_SOURCES.tag && tag.getBoolean("isOxygenTankActive")) {
                 cir.setReturnValue(true);
             }
         }

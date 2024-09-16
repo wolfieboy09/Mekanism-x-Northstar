@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": {
+      "tag": "forge:plates/iron"
+    },
+    "M": {
+      "item": "mekanism:module_base"
+    },
+    "B": {
+      "item": "create:copper_backtank"
+    },
+    "A": {
+      "tag": "mek_x_star:insulating"
+    }
+  },
+  "pattern": [
+    "IBI",
+    "IMI",
+    "AIA"
+  ],
+  "result": {
+    "item": "mek_x_star:module_oxygen_tank"
+  }
+}

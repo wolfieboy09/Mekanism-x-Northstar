@@ -11,12 +11,12 @@ public class ModuleSpaceSuit implements ICustomModule<ModuleSpaceSuit> {
     @Override
     public void onAdded(IModule<ModuleSpaceSuit> module, boolean first) {
         ICustomModule.super.onAdded(module, first);
-        Objects.requireNonNull(module.getContainer().getOrCreateTag()).putBoolean("isSpaceModuleInstalled", true);
+        Objects.requireNonNull(module.getContainer().getOrCreateTag()).putBoolean("isSpaceModuleActive", true);
     }
 
     @Override
     public void onRemoved(IModule<ModuleSpaceSuit> module, boolean last) {
         ICustomModule.super.onRemoved(module, last);
-        Objects.requireNonNull(module.getContainer().getOrCreateTag()).putBoolean("isSpaceModuleInstalled", false);
+        Objects.requireNonNull(module.getContainer().getOrCreateTag()).putBoolean("isSpaceModuleActive", false);
     }
 }
