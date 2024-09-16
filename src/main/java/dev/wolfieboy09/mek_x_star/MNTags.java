@@ -5,6 +5,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 
+// This class nor its vars are being used anywhere... Might just be a waste.
 public class MNTags {
     public static class Items {
         private static TagKey<Item> tag(String name) {

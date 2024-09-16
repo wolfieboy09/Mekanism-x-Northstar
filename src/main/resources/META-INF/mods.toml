@@ -2,6 +2,7 @@ modLoader="javafml" #mandatory
 loaderVersion="${loader_version_range}"
 license="${mod_license}"
 issueTrackerURL="https://github.com/wolfieboy09/Mekanism-x-Northstar/issues"
+
 [[mods]]
 modId="mek_x_star"
 version="${mod_version}"
@@ -15,7 +16,7 @@ authors="${mod_authors}"
 description='''${mod_description}'''
 [[dependencies.mek_x_star]]
     modId="forge"
-    mandatory=true #mandatory
+    mandatory=true
     versionRange="${forge_version_range}"
     ordering="NONE"
     side="BOTH"
