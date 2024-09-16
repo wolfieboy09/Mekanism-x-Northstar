@@ -7,15 +7,16 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
 public class ModuleHeatResistive implements ICustomModule<ModuleHeatResistive> {
+    public static final String TAG = "isHeatResistiveActive";
     @Override
     public void onAdded(IModule<ModuleHeatResistive> module, boolean first) {
         ICustomModule.super.onAdded(module, first);
-        module.getContainer().getOrCreateTag().putBoolean("isInsulationModuleActive", true);
+        module.getContainer().getOrCreateTag().putBoolean(TAG, true);
     }
 
     @Override
     public void onRemoved(IModule<ModuleHeatResistive> module, boolean last) {
         ICustomModule.super.onRemoved(module, last);
-        module.getContainer().getOrCreateTag().putBoolean("isHeatResistiveActive", false);
+        module.getContainer().getOrCreateTag().putBoolean(TAG, false);
     }
 }
