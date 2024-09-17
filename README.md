@@ -7,10 +7,13 @@ You can now:
 - Make your MekaSuit into a space suit
 - Use Mekanism Oxygen and Hydrogen (liquid form) for rocket fuel, and to breath from!
 - There are four modules:
-  - Space Suit Unit
-  - Oxygen Tank Unit
-  - Space Suit Insulation
-  - Heat Resistive Module
+  - Space Suit Unit
+  - Oxygen Tank Unit
+  - Space Suit Insulation
+  - Heat Resistive Module
+
+CurseForge: ![CurseForge Downloads](https://img.shields.io/curseforge/dt/1104223) \
+Modrinth: ![Modrinth Downloads](https://img.shields.io/modrinth/dt/5kBJRF84)
 
 
 # Credits
