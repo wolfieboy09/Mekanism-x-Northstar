@@ -6,10 +6,10 @@ A mod that makes Mekanism and Create: Northstar be friends with each other.
 You can now:
 - Make your MekaSuit into a space suit
 - Use Mekanism Oxygen and Hydrogen (liquid form) for rocket fuel, and to breath from!
-- There are four modules:
-  - Space Suit Unit
-  - Oxygen Tank Unit
-  - Space Suit Insulation
+- There are four modules: \
+  - Space Suit Unit \
+  - Oxygen Tank Unit \
+  - Space Suit Insulation \
   - Heat Resistive Module
 
 CurseForge: ![CurseForge Downloads](https://img.shields.io/curseforge/dt/1104223) \
