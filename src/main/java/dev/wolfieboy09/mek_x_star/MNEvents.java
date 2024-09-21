@@ -2,7 +2,6 @@ package dev.wolfieboy09.mek_x_star;
 
 import dev.wolfieboy09.mek_x_star.registries.MNModules;
 import mekanism.api.MekanismIMC;
-
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;

@@ -4,17 +4,12 @@ import com.mojang.logging.LogUtils;
 import dev.wolfieboy09.mek_x_star.registries.CreativeModTab;
 import dev.wolfieboy09.mek_x_star.registries.MNItems;
 import dev.wolfieboy09.mek_x_star.registries.MNModules;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 @Mod(MekanismNorthStar.MOD_ID)
@@ -22,8 +17,8 @@ public class MekanismNorthStar {
     public static final String MOD_ID = "mek_x_star";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public MekanismNorthStar() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public MekanismNorthStar(@NotNull FMLJavaModLoadingContext context) {
+        IEventBus modEventBus = context.getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
