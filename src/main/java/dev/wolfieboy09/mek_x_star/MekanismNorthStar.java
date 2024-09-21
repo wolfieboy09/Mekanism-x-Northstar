@@ -26,6 +26,7 @@ public class MekanismNorthStar {
         MNItems.ITEMS.register(modEventBus);
         CreativeModTab.TAB.register(modEventBus);
         MNModules.MODULES.register(modEventBus);
+        LOGGER.info("Hello everybody my name is Markiplier and welcome to five nights at freddy's");
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {}
