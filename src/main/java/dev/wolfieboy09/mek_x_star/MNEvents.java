@@ -16,6 +16,5 @@ public class MNEvents {
         MekanismIMC.addMekaSuitModules(MNModules.MODULE_SPACE_SUIT_INSULATION.get());
         MekanismIMC.addMekaSuitModules(MNModules.MODULE_HEAT_RESISTIVE.get());
         MekanismIMC.addMekaSuitBodyarmorModules(MNModules.MODULE_OXYGEN_TANK.get());
-
     }
 }
