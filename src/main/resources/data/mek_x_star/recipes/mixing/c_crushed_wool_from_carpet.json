@@ -2,7 +2,7 @@
   "type": "create:mixing",
   "ingredients": [
     {
-      "tag": "minecraft:wool_carpet"
+      "tag": "minecraft:wool_carpets"
     }
   ],
   "results": [
