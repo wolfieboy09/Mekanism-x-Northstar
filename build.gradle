@@ -117,8 +117,8 @@ dependencies {
 }
 
 mixin {
-    add sourceSets.main, 'mixins.mex_x_north.refmap.json'
-    config 'mixins.mex_x_north.json'
+    add sourceSets.main, 'mixins.mek_x_north.refmap.json'
+    config 'mixins.mek_x_north.json'
 
     debug.verbose = true
     debug.export = true
