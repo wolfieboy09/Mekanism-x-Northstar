@@ -1,25 +1,32 @@
 package dev.wolfieboy09.mek_x_star.registries;
 
 import dev.wolfieboy09.mek_x_star.MekanismNorthStar;
-import mekanism.api.gear.IModuleHelper;
+import mekanism.common.item.ItemModule;
+import mekanism.common.registration.impl.ItemDeferredRegister;
+import mekanism.common.registration.impl.ItemRegistryObject;
+import mekanism.common.registration.impl.ModuleDeferredRegister;
+import mekanism.common.registration.impl.ModuleRegistryObject;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 
 public class MNItems {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MekanismNorthStar.MOD_ID);
+    public static final ItemDeferredRegister ITEMS = new ItemDeferredRegister(MekanismNorthStar.MOD_ID);
+    public static final ModuleDeferredRegister MODULES =  new ModuleDeferredRegister(MekanismNorthStar.MOD_ID);
 
     // MODULES
-    public static final RegistryObject<Item> MODULE_SPACE_SUIT = ITEMS.register("module_space_suit",() -> IModuleHelper.INSTANCE.createModuleItem(MNModuleData.SPACE_SUIT_MODULE_DATA, new Item.Properties()));
-    public static final RegistryObject<Item> MODULE_OXYGEN_TANK = ITEMS.register("module_oxygen_tank",() -> IModuleHelper.INSTANCE.createModuleItem(MNModuleData.OXYGEN_TANK_MODULE_DATA, new Item.Properties()));
-    public static final RegistryObject<Item> MODULE_SPACE_SUIT_INSULATION = ITEMS.register("module_space_suit_insulation",() -> IModuleHelper.INSTANCE.createModuleItem(MNModuleData.SPACE_SUIT_INSULATION_MODULE_DATA, new Item.Properties()));
-    public static final RegistryObject<Item> MODULE_HEAT_RESISTANT = ITEMS.register("module_heat_resistive",() -> IModuleHelper.INSTANCE.createModuleItem(MNModuleData.HEAT_RESISTIVE_MODULE_DATA, new Item.Properties()));
+    public static final ModuleRegistryObject<?> SPACE_SUIT_MARKER = MODULES.registerMarker("module_space_suit", MNItems.MODULE_SPACE_SUIT, builder -> builder);
+    public static final ModuleRegistryObject<?> OXYGEN_TANK_MARKER = MODULES.registerMarker("module_oxygen_tank", MNItems.MODULE_OXYGEN_TANK, builder -> builder);
+    public static final ModuleRegistryObject<?> SPACE_SUIT_INSULATION_MARKER = MODULES.registerMarker("module_space_suit_insulation", MNItems.MODULE_SPACE_SUIT_INSULATION, builder -> builder);
+    public static final ModuleRegistryObject<?> HEAT_RESISTIVE_MARKER = MODULES.registerMarker("module_heat_resistive", MNItems.MODULE_HEAT_RESISTANT, builder -> builder);
+
+    public static final ItemRegistryObject<ItemModule> MODULE_SPACE_SUIT = ITEMS.registerModule(SPACE_SUIT_MARKER);
+    public static final ItemRegistryObject<ItemModule> MODULE_OXYGEN_TANK = ITEMS.registerModule(OXYGEN_TANK_MARKER);
+    public static final ItemRegistryObject<ItemModule> MODULE_SPACE_SUIT_INSULATION = ITEMS.registerModule(SPACE_SUIT_INSULATION_MARKER);
+    public static final ItemRegistryObject<ItemModule> MODULE_HEAT_RESISTANT = ITEMS.registerModule(HEAT_RESISTIVE_MARKER);
 
     // ITEMS
-    public static final RegistryObject<Item> INSULATION = ITEMS.register("insulation",() -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> HEAT_INSULATION = ITEMS.register("heat_insulation",() -> new Item(new Item.Properties()));
+    public static final ItemRegistryObject<Item> INSULATION = ITEMS.register("insulation",() -> new Item(new Item.Properties()));
+    public static final ItemRegistryObject<Item> HEAT_INSULATION = ITEMS.register("heat_insulation",() -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> CRUSHED_WOOL = ITEMS.register("crushed_wool",() -> new Item(new Item.Properties()));
+    public static final ItemRegistryObject<Item> CRUSHED_WOOL = ITEMS.register("crushed_wool",() -> new Item(new Item.Properties()));
 }
 
