@@ -4,11 +4,8 @@ import dev.wolfieboy09.mek_x_star.modules.ModuleHeatResistive;
 import dev.wolfieboy09.mek_x_star.modules.ModuleOxygenTank;
 import dev.wolfieboy09.mek_x_star.modules.ModuleSpaceSuit;
 import dev.wolfieboy09.mek_x_star.modules.ModuleSpaceSuitInsulation;
-import mekanism.api.gear.ModuleData;
 import mekanism.common.registration.impl.ModuleDeferredRegister;
 import mekanism.common.registration.impl.ModuleRegistryObject;
-import mekanism.common.registries.MekanismItems;
-import net.minecraftforge.registries.RegistryObject;
 
 public class MNModules {
     public static final ModuleDeferredRegister MODULES = new ModuleDeferredRegister(MekanismNorthStar.MOD_ID);
