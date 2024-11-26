@@ -17,8 +17,8 @@ public class MekanismNorthStar {
     public static final String MOD_ID = "mek_x_star";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public MekanismNorthStar(@NotNull FMLJavaModLoadingContext context) {
-        IEventBus modEventBus = context.getModEventBus();
+    public MekanismNorthStar() {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
