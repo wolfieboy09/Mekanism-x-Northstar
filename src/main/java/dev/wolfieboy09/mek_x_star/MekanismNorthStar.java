@@ -24,6 +24,7 @@ public class MekanismNorthStar {
         MinecraftForge.EVENT_BUS.register(this);
 
         MNItems.ITEMS.register(modEventBus);
+        MNItems.MODULES.register(modEventBus);
         MNModules.MODULES.register(modEventBus);
         LOGGER.info("Hello everybody my name is Markiplier and welcome to five nights at freddy's");
     }
