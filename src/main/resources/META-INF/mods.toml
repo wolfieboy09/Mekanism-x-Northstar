@@ -1,4 +1,4 @@
-modLoader="javafml" #mandatory
+modLoader="javafml"
 loaderVersion="${loader_version_range}"
 license="${mod_license}"
 issueTrackerURL="https://github.com/wolfieboy09/Mekanism-x-Northstar/issues"
@@ -11,7 +11,7 @@ updateJSONURL="https://raw.githubusercontent.com/wolfieboy09/Mekanism-x-Northsta
 displayURL="https://github.com/wolfieboy09/Mekanism-x-Northstar"
 logoFile="mek_x_star_logo.png"
 credits=""
-authors="${mod_authors}"
+authors="Wolfieboy09"
 
 description='''${mod_description}'''
 [[dependencies.mek_x_star]]
