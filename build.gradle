@@ -116,7 +116,7 @@ dependencies {
 }
 
 mixin {
-    add sourceSets.main, 'mixins.mek_x_north.refmap.json'
+    add sourceSets.main, 'mek_x_north.refmap.json'
     config 'mixins.mek_x_north.json'
 
     debug.verbose = true
