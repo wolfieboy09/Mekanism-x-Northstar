@@ -13,10 +13,10 @@ public class MNItems {
     public static final ModuleDeferredRegister MODULES =  new ModuleDeferredRegister(MekanismNorthStar.MOD_ID);
 
     // MODULES
-    public static final ModuleRegistryObject<?> SPACE_SUIT_MARKER = MODULES.registerMarker("module_space_suit", () -> MNItems.MODULE_SPACE_SUIT.asItem(), builder -> builder);
-    public static final ModuleRegistryObject<?> OXYGEN_TANK_MARKER = MODULES.registerMarker("module_oxygen_tank", () ->  MNItems.MODULE_OXYGEN_TANK.asItem(), builder -> builder);
-    public static final ModuleRegistryObject<?> SPACE_SUIT_INSULATION_MARKER = MODULES.registerMarker("module_space_suit_insulation", () ->  MNItems.MODULE_SPACE_SUIT_INSULATION.asItem(), builder -> builder);
-    public static final ModuleRegistryObject<?> HEAT_RESISTIVE_MARKER = MODULES.registerMarker("module_heat_resistive", () ->  MNItems.MODULE_HEAT_RESISTANT.asItem(), builder -> builder);
+    public static final ModuleRegistryObject<?> SPACE_SUIT_MARKER = MODULES.registerMarker("space_suit", () -> MNItems.MODULE_SPACE_SUIT.asItem(), builder -> builder);
+    public static final ModuleRegistryObject<?> OXYGEN_TANK_MARKER = MODULES.registerMarker("oxygen_tank", () ->  MNItems.MODULE_OXYGEN_TANK.asItem(), builder -> builder);
+    public static final ModuleRegistryObject<?> SPACE_SUIT_INSULATION_MARKER = MODULES.registerMarker("space_suit_insulation", () ->  MNItems.MODULE_SPACE_SUIT_INSULATION.asItem(), builder -> builder);
+    public static final ModuleRegistryObject<?> HEAT_RESISTIVE_MARKER = MODULES.registerMarker("heat_resistive", () ->  MNItems.MODULE_HEAT_RESISTANT.asItem(), builder -> builder);
 
     public static final ItemRegistryObject<ItemModule> MODULE_SPACE_SUIT = ITEMS.registerModule(SPACE_SUIT_MARKER);
     public static final ItemRegistryObject<ItemModule> MODULE_OXYGEN_TANK = ITEMS.registerModule(OXYGEN_TANK_MARKER);
