@@ -10,5 +10,6 @@
   "creativetab.mek_x_star.name": "Mekanism x Create: Northstar Items",
   "item.mek_x_star.insulation": "Insulation",
   "item.mek_x_star.heat_insulation": "Heat Insulation",
-  "item.mek_x_star.crushed_wool": "Crushed Wool"
+  "item.mek_x_star.crushed_wool": "Crushed Wool",
+  "itemGroup.mek_x_star.group": "Mekanism x Create: Northstar Items"
 }
