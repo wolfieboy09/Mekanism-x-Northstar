@@ -9,7 +9,7 @@ import static dev.wolfieboy09.mek_x_star.MekanismNorthStar.MOD_ID;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = MOD_ID)
 public class MNCreativeModTab {
-    public static CreativeModeTab TAB = new CreativeModeTab("items") {
+    public static CreativeModeTab TAB = new CreativeModeTab("mek_x_star.group") {
         @Override
         public @NotNull ItemStack makeIcon() {
             return new ItemStack(MNItems.MODULE_SPACE_SUIT.get());
