@@ -113,6 +113,7 @@ dependencies {
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
 
     implementation fg.deobf("curse.maven:create-northstar-1071749:5611707")
+    compileOnly fg.deobf("curse.maven:northstar-redux-1318310:6900544")
 }
 
 mixin {
