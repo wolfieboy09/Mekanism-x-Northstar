@@ -116,7 +116,9 @@ dependencies {
 
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
 
-    //implementation fg.deobf("curse.maven:create-northstar-1071749:5611707")
+    runtimeOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.5.0"))
+    runtimeOnly("io.github.llamalad7:mixinextras-forge:0.5.0")
+
     implementation fg.deobf("curse.maven:northstar-redux-1318310:7182056")
 }
 
