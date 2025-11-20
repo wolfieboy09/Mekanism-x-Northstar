@@ -1,6 +1,6 @@
 package dev.wolfieboy09.mek_x_star.mixins;
 
-import dev.wolfieboy09.mek_x_star.compact.NorthstarTags;
+import com.lightning.northstar.content.NorthstarTags;
 import dev.wolfieboy09.mek_x_star.modules.ModuleHeatResistive;
 import dev.wolfieboy09.mek_x_star.modules.ModuleOxygenTank;
 import dev.wolfieboy09.mek_x_star.modules.ModuleSpaceSuit;
@@ -26,16 +26,16 @@ public abstract class ItemTagMixin {
     private void gaslightMinecraft(TagKey<Item> pTag, CallbackInfoReturnable<Boolean> cir) {
         CompoundTag tag = mekanismXNorthstar$self().getTag();
         if (tag != null) {
-            if (pTag == NorthstarTags.INSULATING && tag.getBoolean(ModuleSpaceSuitInsulation.TAG)) {
+            if (pTag == NorthstarTags.NorthstarItemTags.INSULATING.tag() && tag.getBoolean(ModuleSpaceSuitInsulation.TAG)) {
                 cir.setReturnValue(true);
             }
-            if (pTag == NorthstarTags.OXYGEN_SEALING && tag.getBoolean(ModuleSpaceSuit.TAG)) {
+            if (pTag == NorthstarTags.NorthstarItemTags.OXYGEN_SEALING.tag() && tag.getBoolean(ModuleSpaceSuit.TAG)) {
                 cir.setReturnValue(true);
             }
-            if (pTag == NorthstarTags.HEAT_RESISTANT && tag.getBoolean(ModuleHeatResistive.TAG)) {
+            if (pTag == NorthstarTags.NorthstarItemTags.HEAT_RESISTANT.tag() && tag.getBoolean(ModuleHeatResistive.TAG)) {
                 cir.setReturnValue(true);
             }
-            if (pTag == NorthstarTags.OXYGEN_SOURCES && tag.getBoolean(ModuleOxygenTank.TAG)) {
+            if (pTag == NorthstarTags.NorthstarItemTags.OXYGEN_SOURCES.tag() && tag.getBoolean(ModuleOxygenTank.TAG)) {
                 cir.setReturnValue(true);
             }
         }
