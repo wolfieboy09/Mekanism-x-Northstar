@@ -25,7 +25,7 @@ public class MNModuleData {
                 public @NotNull Item asItem() {
                     return MNItems.MODULE_OXYGEN_TANK.get();
                 }
-            }).maxStackSize(1)
+            }).maxStackSize(1).rendersHUD()
     );
 
     public static final ModuleData<ModuleSpaceSuitInsulation> SPACE_SUIT_INSULATION_MODULE_DATA = new ModuleData<>(
