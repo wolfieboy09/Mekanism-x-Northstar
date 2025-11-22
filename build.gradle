@@ -95,6 +95,19 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        forRepositories(fg.repository)
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 dependencies {
@@ -119,7 +132,7 @@ dependencies {
     runtimeOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.5.0"))
     runtimeOnly("io.github.llamalad7:mixinextras-forge:0.5.0")
 
-    implementation fg.deobf("curse.maven:northstar-redux-1318310:7182056")
+    implementation fg.deobf("maven.modrinth:northstar-redux:${northstar_version}")
 }
 
 mixin {
