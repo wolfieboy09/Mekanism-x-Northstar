@@ -4,7 +4,6 @@ import com.lightning.northstar.content.NorthstarTags;
 import com.lightning.northstar.util.NorthstarLang;
 import mekanism.api.gear.ICustomModule;
 import mekanism.api.gear.IModule;
-import mekanism.api.gear.config.ModuleConfigItemCreator;
 import net.createmod.catnip.lang.LangNumberFormat;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
