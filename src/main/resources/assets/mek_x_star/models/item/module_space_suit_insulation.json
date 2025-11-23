@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "mek_x_star:item/module_space_suit_insulation"
-  }
-}
