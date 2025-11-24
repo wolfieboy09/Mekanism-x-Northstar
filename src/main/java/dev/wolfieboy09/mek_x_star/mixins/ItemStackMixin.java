@@ -25,20 +25,25 @@ public abstract class ItemStackMixin implements DataComponentHolder, MutableData
     private void gaslightMinecraft(TagKey<Item> tag, CallbackInfoReturnable<Boolean> cir) {
         ItemStack self = mekanismXNorthstar$self();
 
-        if (tag == NorthstarTags.NorthstarItemTags.INSULATING.tag() && self.has(MNDataComponents.INSULATING)) {
-            cir.setReturnValue(true);
-        }
+        // Space suit unit.
+        // Uninstalling that unit makes the suit fine??
+        // Well, let's just do this
+        if (self.has(MNDataComponents.OXYGEN_SEALING)) {
+            if (tag == NorthstarTags.NorthstarItemTags.INSULATING.tag() && self.has(MNDataComponents.INSULATING)) {
+                cir.setReturnValue(true);
+            }
 
-        if (tag == NorthstarTags.NorthstarItemTags.OXYGEN_SEALING.tag() && self.has(MNDataComponents.OXYGEN_SEALING)) {
-            cir.setReturnValue(true);
-        }
+            if (tag == NorthstarTags.NorthstarItemTags.OXYGEN_SEALING.tag() && self.has(MNDataComponents.OXYGEN_SEALING)) {
+                cir.setReturnValue(true);
+            }
 
-        if (tag == NorthstarTags.NorthstarItemTags.HEAT_RESISTANT.tag() && self.has(MNDataComponents.HEAT_RESISTANT)) {
-            cir.setReturnValue(true);
-        }
+            if (tag == NorthstarTags.NorthstarItemTags.HEAT_RESISTANT.tag() && self.has(MNDataComponents.HEAT_RESISTANT)) {
+                cir.setReturnValue(true);
+            }
 
-        if (tag == NorthstarTags.NorthstarItemTags.OXYGEN_SOURCES.tag() && self.has(MNDataComponents.OXYGEN_SOURCE)) {
-            cir.setReturnValue(true);
+            if (tag == NorthstarTags.NorthstarItemTags.OXYGEN_SOURCES.tag() && self.has(MNDataComponents.OXYGEN_SOURCE)) {
+                cir.setReturnValue(true);
+            }
         }
     }
 }
