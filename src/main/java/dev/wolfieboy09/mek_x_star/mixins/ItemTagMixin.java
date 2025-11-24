@@ -25,7 +25,7 @@ public abstract class ItemTagMixin {
     @Inject(method = "is(Lnet/minecraft/tags/TagKey;)Z", at=@At("HEAD"), cancellable = true)
     private void gaslightMinecraft(TagKey<Item> pTag, CallbackInfoReturnable<Boolean> cir) {
         CompoundTag tag = mekanismXNorthstar$self().getTag();
-        if (tag != null) {
+        if (tag != null && tag.getBoolean(ModuleSpaceSuit.TAG)) {
             if (pTag == NorthstarTags.NorthstarItemTags.INSULATING.tag() && tag.getBoolean(ModuleSpaceSuitInsulation.TAG)) {
                 cir.setReturnValue(true);
             }
