@@ -1,0 +1,26 @@
+package dev.wolfieboy09.mek_x_star.registries;
+
+import dev.wolfieboy09.mek_x_star.MekanismNorthStar;
+import dev.wolfieboy09.mek_x_star.modules.ModuleHeatResistive;
+import dev.wolfieboy09.mek_x_star.modules.ModuleOxygenTank;
+import dev.wolfieboy09.mek_x_star.modules.ModuleSpaceSuit;
+import dev.wolfieboy09.mek_x_star.modules.ModuleSpaceSuitInsulation;
+import mekanism.common.registration.impl.ModuleDeferredRegister;
+import mekanism.common.registration.impl.ModuleRegistryObject;
+
+
+public class MNModules {
+    public static final ModuleDeferredRegister MODULES = new ModuleDeferredRegister(MekanismNorthStar.MOD_ID);
+
+    public static final ModuleRegistryObject<ModuleHeatResistive> MODULE_HEAT_RESISTIVE = MODULES.registerInstanced("heat_resistive", ModuleHeatResistive::new,
+            () -> MNItems.MODULE_HEAT_RESISTIVE, builder -> builder.maxStackSize(1).noDisable());
+
+    public static final ModuleRegistryObject<ModuleOxygenTank> MODULE_OXYGEN_TANK = MODULES.registerInstanced("oxygen_tank", ModuleOxygenTank::new,
+            () -> MNItems.MODULE_OXYGEN_TANK, builder -> builder.maxStackSize(1).noDisable().rendersHUD());
+
+    public static final ModuleRegistryObject<ModuleSpaceSuitInsulation> MODULE_SPACE_SUIT_INSULATION = MODULES.registerInstanced("space_suit_insulation", ModuleSpaceSuitInsulation::new,
+            () -> MNItems.MODULE_SPACE_SUIT_INSULATION, builder -> builder.maxStackSize(1).noDisable());
+
+    public static final ModuleRegistryObject<ModuleSpaceSuit> MODULE_SPACE_SUIT = MODULES.registerInstanced("space_suit", ModuleSpaceSuit::new,
+            () -> MNItems.MODULE_SPACE_SUIT, builder -> builder.maxStackSize(1).noDisable());
+}
