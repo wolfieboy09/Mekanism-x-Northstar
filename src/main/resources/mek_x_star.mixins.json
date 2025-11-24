@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "priority": 10000,
+  "package": "dev.wolfieboy09.mek_x_star.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mek_x_north.refmap.json",
+  "mixins": [
+    "ItemStackMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
