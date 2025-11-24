@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "northstar:martian_steel"
+    },
+    "I": {
+      "tag": "mek_x_star:insulating"
+    },
+    "W": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "pattern": [
+    "CIW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mek_x_star:heat_insulation"
+  }
+}

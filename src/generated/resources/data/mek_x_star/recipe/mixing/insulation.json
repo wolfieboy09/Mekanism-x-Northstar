@@ -1,0 +1,25 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "mek_x_star:crushed_wool"
+    },
+    {
+      "tag": "mek_x_star:crushed_wool"
+    },
+    {
+      "item": "create:crushed_raw_copper"
+    },
+    {
+      "item": "create:crushed_raw_copper"
+    },
+    {
+      "item": "create:crushed_raw_iron"
+    }
+  ],
+  "results": [
+    {
+      "id": "mek_x_star:insulation"
+    }
+  ]
+}

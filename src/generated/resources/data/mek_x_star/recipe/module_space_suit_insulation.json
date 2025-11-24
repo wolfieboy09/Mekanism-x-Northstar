@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "mek_x_star:insulating"
+    },
+    "M": {
+      "item": "mekanism:module_base"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "S": {
+      "item": "mekanism:hdpe_sheet"
+    }
+  },
+  "pattern": [
+    "III",
+    "IMI",
+    "PSP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mek_x_star:module_space_suit_insulation"
+  }
+}

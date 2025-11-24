@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "mek_x_star:insulating"
+    },
+    "B": {
+      "item": "create:netherite_backtank"
+    },
+    "I": {
+      "tag": "c:plates/iron"
+    },
+    "M": {
+      "item": "mekanism:module_base"
+    }
+  },
+  "pattern": [
+    "IBI",
+    "IMI",
+    "AIA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mek_x_star:module_oxygen_tank"
+  }
+}
