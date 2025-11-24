@@ -13,7 +13,37 @@ version = mod_version
 group = mod_group_id
 
 repositories {
+    maven { url = "https://maven.createmod.net" }
+    maven { url = "https://maven.ithundxr.dev/snapshots" }
+    maven { url 'https://modmaven.dev/' }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
 
+dependencies {
+    implementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
+    implementation("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
+    compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
+    runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
+    implementation("com.tterrag.registrate:Registrate:${registrate_version}")
+
+    implementation "maven.modrinth:northstar-redux:${northstar_version}+${minecraft_version}"
+
+    compileOnly "mekanism:Mekanism:${minecraft_version}-${mekanism_version}:api"
+    implementation "mekanism:Mekanism:${minecraft_version}-${mekanism_version}"
+
+    runtimeOnly "maven.modrinth:jei:exx7mr1K"
+
+    runtimeOnly "maven.modrinth:geckolib:${geckolib_version}"
 }
 
 base {
@@ -70,10 +100,6 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 configurations {
     runtimeClasspath.extendsFrom localRuntime
-}
-
-dependencies {
-
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
