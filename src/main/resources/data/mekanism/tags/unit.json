@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mek_x_star:module_space_suit",
+    "mek_x_star:module_oxygen_tank",
+    "mek_x_star:module_space_suit_insulation",
+    "mek_x_star:module_heat_resistive"
+  ]
+}
