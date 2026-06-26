@@ -29,10 +29,10 @@ public class MNRecipeDataProvider extends RecipeProvider {
     protected void buildRecipes(RecipeOutput recipeOutput) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MNItems.HEAT_INSULATION)
                 .define('I', MNItemTags.INSULATING)
-                .define('C', NorthstarItems.MARTIAN_STEEL)
+                .define('C', NorthstarItems.MARTIAN_STEEL_SHEET)
                 .define('W', Items.BLAZE_POWDER)
                 .pattern("CIW")
-                .unlockedBy("has_martian_steel", has(NorthstarItems.MARTIAN_STEEL))
+                .unlockedBy("has_martian_steel", has(NorthstarItems.MARTIAN_STEEL_SHEET))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MNItems.MODULE_HEAT_RESISTIVE)
