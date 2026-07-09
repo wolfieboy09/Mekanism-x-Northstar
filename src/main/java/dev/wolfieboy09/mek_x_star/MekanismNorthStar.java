@@ -20,7 +20,7 @@ public class MekanismNorthStar {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public MekanismNorthStar(IEventBus modEventBus, ModContainer modContainer) {
-        LOGGER.info("Mekanism? In space? HILARIOUS");
+        LOGGER.info("So much space here... forever or not... the universe.... anyways time to colonize");
         MNDataComponents.REGISTAR.register(modEventBus);
         MNItems.ITEMS.register(modEventBus);
         MNModules.MODULES.register(modEventBus);
