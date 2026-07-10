@@ -4,6 +4,7 @@
     "mek_x_star:heat_resistive",
     "mek_x_star:oxygen_tank",
     "mek_x_star:space_suit_insulation",
-    "mek_x_star:space_suit"
+    "mek_x_star:space_suit",
+    "mek_x_star:oxygen_tank_expansion"
   ]
 }
