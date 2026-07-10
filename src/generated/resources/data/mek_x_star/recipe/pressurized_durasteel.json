@@ -1,0 +1,20 @@
+{
+  "type": "mekanism:reaction",
+  "chemical_input": {
+    "amount": 100,
+    "tag": "mekanism:carbon"
+  },
+  "duration": 50,
+  "fluid_input": {
+    "amount": 100,
+    "tag": "c:titanium_tetrachloride"
+  },
+  "item_input": {
+    "count": 1,
+    "tag": "c:ingot/durasteel"
+  },
+  "item_output": {
+    "count": 1,
+    "id": "mek_x_star:pressurized_durasteel"
+  }
+}
