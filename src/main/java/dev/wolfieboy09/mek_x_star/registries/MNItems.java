@@ -15,9 +15,14 @@ public class MNItems {
     public static final ItemRegistryObject<ItemModule> MODULE_OXYGEN_TANK = ITEMS.registerModule(MNModules.MODULE_OXYGEN_TANK);
     public static final ItemRegistryObject<ItemModule> MODULE_SPACE_SUIT_INSULATION = ITEMS.registerModule(MNModules.MODULE_SPACE_SUIT_INSULATION);
     public static final ItemRegistryObject<ItemModule> MODULE_SPACE_SUIT = ITEMS.registerModule(MNModules.MODULE_SPACE_SUIT, Rarity.UNCOMMON);
+    public static final ItemRegistryObject<ItemModule> MODULE_OXYGEN_TANK_EXPANSION = ITEMS.registerModule(MNModules.MODULE_OXYGEN_TANK_EXPANSION, Rarity.UNCOMMON);
+
 
     // ITEMS
     public static final ItemRegistryObject<Item> INSULATION = ITEMS.register("insulation");
     public static final ItemRegistryObject<Item> HEAT_INSULATION = ITEMS.register("heat_insulation");
     public static final ItemRegistryObject<Item> CRUSHED_WOOL = ITEMS.register("crushed_wool");
+    public static final ItemRegistryObject<Item> DURASTEEL = ITEMS.register("durasteel");
+    public static final ItemRegistryObject<Item> PRESSURIZED_DURASTEEL = ITEMS.register("pressurized_durasteel");
+    public static final ItemRegistryObject<Item> INCOMPLETE_OXYGEN_TANK_EXPANSION_MODULE = ITEMS.register("incomplete_oxygen_tank_expansion");
 }
