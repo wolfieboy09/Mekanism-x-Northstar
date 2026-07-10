@@ -14,6 +14,7 @@ public class MNItemTags {
     public static final TagKey<Item> CRUSHED_WOOL = modTag("crushed_wool");
     public static final TagKey<Item> WOOL = minecraftTag("wool");
     public static final TagKey<Item> WOOL_CARPET = minecraftTag("wool_carpets");
+    public static final TagKey<Item> DURASTEEL_INGOT = commonTag("ingot/durasteel");
 
     public static final TagKey<Item> IRON_PLATES = commonTag("plates/iron");
 
