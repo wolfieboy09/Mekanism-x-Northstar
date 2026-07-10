@@ -1,0 +1,76 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "mek_x_star:module_oxygen_tank"
+  },
+  "loops": 2,
+  "results": [
+    {
+      "id": "mek_x_star:module_oxygen_tank_expansion"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "mek_x_star:incomplete_oxygen_tank_expansion"
+        },
+        {
+          "item": "mek_x_star:pressurized_durasteel"
+        }
+      ],
+      "results": [
+        {
+          "id": "mek_x_star:incomplete_oxygen_tank_expansion"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "mek_x_star:incomplete_oxygen_tank_expansion"
+        },
+        {
+          "item": "mekanism:alloy_atomic"
+        }
+      ],
+      "results": [
+        {
+          "id": "mek_x_star:incomplete_oxygen_tank_expansion"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "mek_x_star:incomplete_oxygen_tank_expansion"
+        }
+      ],
+      "results": [
+        {
+          "id": "mek_x_star:incomplete_oxygen_tank_expansion"
+        }
+      ]
+    },
+    {
+      "type": "northstar:engraving",
+      "ingredients": [
+        {
+          "item": "mek_x_star:incomplete_oxygen_tank_expansion"
+        }
+      ],
+      "processing_time": 500,
+      "results": [
+        {
+          "id": "mek_x_star:incomplete_oxygen_tank_expansion"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "mek_x_star:incomplete_oxygen_tank_expansion"
+  }
+}
