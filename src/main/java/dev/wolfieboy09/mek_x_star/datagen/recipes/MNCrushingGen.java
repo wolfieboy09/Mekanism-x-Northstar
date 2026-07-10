@@ -11,8 +11,8 @@ import net.minecraft.world.item.ItemStack;
 
 import java.util.concurrent.CompletableFuture;
 
-public class CrushingGen extends CrushingRecipeGen {
-    public CrushingGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+public class MNCrushingGen extends CrushingRecipeGen {
+    public MNCrushingGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, MekanismNorthStar.MOD_ID);
     }
 

@@ -17,9 +17,12 @@ public class MNCreativeModeTab {
                 output.accept(MNItems.MODULE_SPACE_SUIT_INSULATION);
                 output.accept(MNItems.MODULE_OXYGEN_TANK);
                 output.accept(MNItems.MODULE_HEAT_RESISTIVE);
+                output.accept(MNItems.MODULE_OXYGEN_TANK_EXPANSION);
                 output.accept(MNItems.CRUSHED_WOOL);
                 output.accept(MNItems.INSULATION);
                 output.accept(MNItems.HEAT_INSULATION);
+                output.accept(MNItems.DURASTEEL);
+                output.accept(MNItems.PRESSURIZED_DURASTEEL);
             })
             .build());
 

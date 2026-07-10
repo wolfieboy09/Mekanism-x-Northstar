@@ -12,8 +12,8 @@ import net.minecraft.data.PackOutput;
 
 import java.util.concurrent.CompletableFuture;
 
-public class MechanicalCraftingGen extends MechanicalCraftingRecipeGen {
-    public MechanicalCraftingGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+public class MNMechanicalCraftingGen extends MechanicalCraftingRecipeGen {
+    public MNMechanicalCraftingGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, MekanismNorthStar.MOD_ID);
     }
 
