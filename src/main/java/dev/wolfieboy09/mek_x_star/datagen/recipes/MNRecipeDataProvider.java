@@ -1,10 +1,20 @@
 package dev.wolfieboy09.mek_x_star.datagen.recipes;
 
 import com.lightning.northstar.content.NorthstarItems;
+import com.lightning.northstar.content.NorthstarTags;
 import com.simibubi.create.AllItems;
+import dev.wolfieboy09.mek_x_star.MekanismNorthStar;
 import dev.wolfieboy09.mek_x_star.registries.MNItems;
 import dev.wolfieboy09.mek_x_star.tags.MNItemTags;
+import mekanism.api.MekanismAPITags;
+import mekanism.api.datagen.recipe.builder.ItemStackChemicalToItemStackRecipeBuilder;
+import mekanism.api.datagen.recipe.builder.PressurizedReactionRecipeBuilder;
+import mekanism.api.recipes.ingredients.ChemicalStackIngredient;
+import mekanism.api.recipes.ingredients.ItemStackIngredient;
+import mekanism.api.recipes.ingredients.creator.IngredientCreatorAccess;
+import mekanism.common.registries.MekanismChemicals;
 import mekanism.common.registries.MekanismItems;
+import mekanism.common.tags.MekanismTags;
 import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
@@ -13,8 +23,10 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
+import net.neoforged.neoforge.common.crafting.SizedIngredient;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;
@@ -67,5 +79,20 @@ public class MNRecipeDataProvider extends RecipeProvider {
                 .pattern("PSP")
                 .unlockedBy("has_insulation", has(MNItemTags.INSULATING))
                 .save(recipeOutput);
+
+        ItemStackChemicalToItemStackRecipeBuilder.metallurgicInfusing(
+                IngredientCreatorAccess.item().from(MekanismTags.Items.INGOTS_STEEL),
+                IngredientCreatorAccess.chemicalStack().from(MekanismAPITags.Chemicals.CARBON, 40),
+                MNItems.DURASTEEL.asStack(),
+                false
+        ).build(recipeOutput);
+
+        PressurizedReactionRecipeBuilder.reaction(
+                IngredientCreatorAccess.item().from(MNItemTags.DURASTEEL_INGOT),
+                IngredientCreatorAccess.fluid().from(NorthstarTags.NorthstarFluidTags.C_TITANIUM_TETRACHLORIDE.tag, 100),
+                IngredientCreatorAccess.chemicalStack().from(MekanismAPITags.Chemicals.CARBON, 100),
+                50,
+                MNItems.PRESSURIZED_DURASTEEL.asStack()
+        ).build(recipeOutput, ResourceLocation.fromNamespaceAndPath(MekanismNorthStar.MOD_ID, "pressurized_durasteel"));
     }
 }
