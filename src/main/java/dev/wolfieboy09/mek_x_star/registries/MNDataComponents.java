@@ -1,5 +1,6 @@
 package dev.wolfieboy09.mek_x_star.registries;
 
+import com.mojang.serialization.Codec;
 import dev.wolfieboy09.mek_x_star.MekanismNorthStar;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
@@ -15,8 +16,13 @@ public final class MNDataComponents {
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Unit>> OXYGEN_SOURCE = ofEmpty("oxygen_source");
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Unit>> OXYGEN_SEALING = ofEmpty("oxygen_sealing");
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Unit>> INSULATING = ofEmpty("insulating");
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> OXYGEN_EXPANSIONS = ofInt("oxygen_expansion");
 
     private static @NotNull DeferredHolder<DataComponentType<?>, DataComponentType<Unit>> ofEmpty(String id) {
         return REGISTAR.registerComponentType(id, builder -> builder.persistent(Unit.CODEC));
+    }
+
+    private static @NotNull DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> ofInt(String id) {
+        return REGISTAR.registerComponentType(id, builder -> builder.persistent(Codec.INT));
     }
 }
