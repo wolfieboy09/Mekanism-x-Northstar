@@ -4,9 +4,9 @@
     "amount": 100,
     "tag": "mekanism:carbon"
   },
-  "duration": 50,
+  "duration": 100,
   "fluid_input": {
-    "amount": 100,
+    "amount": 50,
     "tag": "c:titanium_tetrachloride"
   },
   "item_input": {

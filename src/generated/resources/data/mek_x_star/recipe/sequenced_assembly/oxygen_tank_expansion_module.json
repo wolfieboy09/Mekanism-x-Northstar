@@ -43,10 +43,27 @@
       ]
     },
     {
-      "type": "create:pressing",
+      "type": "northstar:engraving",
       "ingredients": [
         {
           "item": "mek_x_star:incomplete_oxygen_tank_expansion"
+        }
+      ],
+      "processing_time": 500,
+      "results": [
+        {
+          "id": "mek_x_star:incomplete_oxygen_tank_expansion"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "mek_x_star:incomplete_oxygen_tank_expansion"
+        },
+        {
+          "item": "mekanism:hdpe_sheet"
         }
       ],
       "results": [
@@ -56,13 +73,12 @@
       ]
     },
     {
-      "type": "northstar:engraving",
+      "type": "create:pressing",
       "ingredients": [
         {
           "item": "mek_x_star:incomplete_oxygen_tank_expansion"
         }
       ],
-      "processing_time": 500,
       "results": [
         {
           "id": "mek_x_star:incomplete_oxygen_tank_expansion"
