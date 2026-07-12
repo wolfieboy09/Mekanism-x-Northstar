@@ -31,3 +31,17 @@ config="mek_x_star.mixins.json"
     versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.mek_x_star]]
+    modId="northstar"
+    type="required"
+    versionRange="[${northstar_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.mek_x_star]]
+    modId="mekanism"
+    type="required"
+    versionRange="[10.7.19,)"
+    ordering="NONE"
+    side="BOTH"
