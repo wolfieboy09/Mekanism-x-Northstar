@@ -25,5 +25,8 @@ public class MNItemTagProvider extends ItemTagsProvider {
         tag(MNItemTags.CRUSHED_WOOL)
                 .add(MNItems.CRUSHED_WOOL.get());
 
+        tag(MNItemTags.DURASTEEL_INGOT)
+                .add(MNItems.DURASTEEL.get());
+
     }
 }
