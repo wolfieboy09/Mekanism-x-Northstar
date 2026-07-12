@@ -89,9 +89,9 @@ public class MNRecipeDataProvider extends RecipeProvider {
 
         PressurizedReactionRecipeBuilder.reaction(
                 IngredientCreatorAccess.item().from(MNItemTags.DURASTEEL_INGOT),
-                IngredientCreatorAccess.fluid().from(NorthstarTags.NorthstarFluidTags.C_TITANIUM_TETRACHLORIDE.tag, 100),
+                IngredientCreatorAccess.fluid().from(NorthstarTags.NorthstarFluidTags.C_TITANIUM_TETRACHLORIDE.tag, 50),
                 IngredientCreatorAccess.chemicalStack().from(MekanismAPITags.Chemicals.CARBON, 100),
-                50,
+                100,
                 MNItems.PRESSURIZED_DURASTEEL.asStack()
         ).build(recipeOutput, ResourceLocation.fromNamespaceAndPath(MekanismNorthStar.MOD_ID, "pressurized_durasteel"));
     }
