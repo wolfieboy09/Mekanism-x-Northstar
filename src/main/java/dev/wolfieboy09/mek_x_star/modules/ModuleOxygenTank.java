@@ -4,7 +4,6 @@ import com.lightning.northstar.content.NorthstarDataComponents;
 import com.lightning.northstar.content.NorthstarTags;
 import com.lightning.northstar.util.NorthstarLang;
 import dev.wolfieboy09.mek_x_star.registries.MNDataComponents;
-import mekanism.api.gear.ICustomModule;
 import mekanism.api.gear.IModule;
 import mekanism.api.gear.IModuleContainer;
 import net.createmod.catnip.lang.LangNumberFormat;

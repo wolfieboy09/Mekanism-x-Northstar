@@ -1,5 +1,6 @@
 package dev.wolfieboy09.mek_x_star;
 
+import com.mojang.logging.LogUtils;
 import com.simibubi.create.AllEnchantments;
 import dev.wolfieboy09.mek_x_star.registries.MNCreativeModeTab;
 import dev.wolfieboy09.mek_x_star.registries.MNDataComponents;
@@ -10,16 +11,13 @@ import mekanism.common.registries.MekanismItems;
 import net.minecraft.core.Holder;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.InterModEnqueueEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.enchanting.GetEnchantmentLevelEvent;
 import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.ModContainer;
 
 @Mod(MekanismNorthStar.MOD_ID)
 public class MekanismNorthStar {
