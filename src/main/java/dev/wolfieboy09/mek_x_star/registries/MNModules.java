@@ -1,9 +1,6 @@
 package dev.wolfieboy09.mek_x_star.registries;
 import dev.wolfieboy09.mek_x_star.MekanismNorthStar;
-import dev.wolfieboy09.mek_x_star.modules.ModuleHeatResistive;
-import dev.wolfieboy09.mek_x_star.modules.ModuleOxygenTank;
-import dev.wolfieboy09.mek_x_star.modules.ModuleSpaceSuit;
-import dev.wolfieboy09.mek_x_star.modules.ModuleSpaceSuitInsulation;
+import dev.wolfieboy09.mek_x_star.modules.*;
 import mekanism.api.MekanismAPI;
 import mekanism.api.gear.ModuleData;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,4 +13,5 @@ public class MNModules {
     public static final RegistryObject<ModuleData<ModuleOxygenTank>> MODULE_OXYGEN_TANK = MODULES.register("module_oxygen_tank", () -> MNModuleData.OXYGEN_TANK_MODULE_DATA);
     public static final RegistryObject<ModuleData<ModuleSpaceSuitInsulation>> MODULE_SPACE_SUIT_INSULATION = MODULES.register("module_space_suit_insulation", () -> MNModuleData.SPACE_SUIT_INSULATION_MODULE_DATA);
     public static final RegistryObject<ModuleData<ModuleHeatResistive>> MODULE_HEAT_RESISTIVE = MODULES.register("module_heat_resistive", () -> MNModuleData.HEAT_RESISTIVE_MODULE_DATA);
+    public static final RegistryObject<ModuleData<ModuleOxygenTankExpansion>> MODULE_OXYGEN_TANK_EXPANSION = MODULES.register("module_oxygen_tank_expansion", () -> MNModuleData.OXYGEN_TANK_EXPANSION_MODULE_DATA);
 }

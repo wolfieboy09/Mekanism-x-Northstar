@@ -21,6 +21,7 @@ public class CreativeModTab {
                         output.accept(MNItems.MODULE_OXYGEN_TANK.get());
                         output.accept(MNItems.MODULE_SPACE_SUIT_INSULATION.get());
                         output.accept(MNItems.MODULE_HEAT_RESISTANT.get());
+                        output.accept(MNItems.MODULE_OXYGEN_TANK_EXPANSION.get());
                         output.accept(MNItems.INSULATION.get());
                         output.accept(MNItems.HEAT_INSULATION.get());
                         output.accept(MNItems.CRUSHED_WOOL.get());

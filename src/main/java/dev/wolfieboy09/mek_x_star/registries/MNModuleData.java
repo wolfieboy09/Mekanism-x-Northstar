@@ -1,9 +1,6 @@
 package dev.wolfieboy09.mek_x_star.registries;
 
-import dev.wolfieboy09.mek_x_star.modules.ModuleHeatResistive;
-import dev.wolfieboy09.mek_x_star.modules.ModuleOxygenTank;
-import dev.wolfieboy09.mek_x_star.modules.ModuleSpaceSuit;
-import dev.wolfieboy09.mek_x_star.modules.ModuleSpaceSuitInsulation;
+import dev.wolfieboy09.mek_x_star.modules.*;
 import mekanism.api.gear.ModuleData;
 import mekanism.api.providers.IItemProvider;
 import net.minecraft.world.item.Item;
@@ -44,6 +41,15 @@ public class MNModuleData {
                     return MNItems.MODULE_HEAT_RESISTANT.get();
                 }
             }).maxStackSize(1)
+    );
+
+    public static final ModuleData<ModuleOxygenTankExpansion> OXYGEN_TANK_EXPANSION_MODULE_DATA = new ModuleData<>(
+            ModuleData.ModuleDataBuilder.custom(ModuleOxygenTankExpansion::new, new IItemProvider() {
+                @Override
+                public @NotNull Item asItem() {
+                    return MNItems.MODULE_OXYGEN_TANK_EXPANSION.get();
+                }
+            }).maxStackSize(2)
     );
 }
 
