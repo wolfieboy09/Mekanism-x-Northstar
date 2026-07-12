@@ -22,7 +22,7 @@ public abstract class ItemStackMixin implements DataComponentHolder, MutableData
     }
 
     @Inject(method = "is(Lnet/minecraft/tags/TagKey;)Z", at = @At("HEAD"), cancellable = true)
-    private void gaslightMinecraft(TagKey<Item> tag, CallbackInfoReturnable<Boolean> cir) {
+    private void reportFakeTags(TagKey<Item> tag, CallbackInfoReturnable<Boolean> cir) {
         ItemStack self = mekanismXNorthstar$self();
 
         // Space suit unit.
