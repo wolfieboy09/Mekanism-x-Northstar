@@ -8,25 +8,23 @@ import mekanism.api.gear.ICustomModule;
 import mekanism.api.gear.IModule;
 import mekanism.api.gear.IModuleContainer;
 import net.createmod.catnip.lang.LangNumberFormat;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.util.Unit;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Consumer;
 
 @ParametersAreNonnullByDefault
-public class ModuleOxygenTank implements ICustomModule<ModuleOxygenTank> {
+public class ModuleOxygenTank extends MNCommonModule<ModuleOxygenTank> {
     @Override
-    public void onAdded(IModule<ModuleOxygenTank> module, IModuleContainer moduleContainer, ItemStack stack, boolean first) {
-        stack.set(MNDataComponents.OXYGEN_SOURCE, Unit.INSTANCE);
-    }
-
-    @Override
-    public void onRemoved(IModule<ModuleOxygenTank> module, IModuleContainer moduleContainer, ItemStack stack, boolean wasLast) {
-        stack.remove(MNDataComponents.OXYGEN_SOURCE);
+    protected @Nullable DeferredHolder<DataComponentType<?>, DataComponentType<Unit>> getComponentType() {
+        return MNDataComponents.OXYGEN_SOURCE;
     }
 
     @Override
