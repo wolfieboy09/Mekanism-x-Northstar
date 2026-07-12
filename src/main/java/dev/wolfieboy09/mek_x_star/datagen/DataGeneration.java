@@ -1,10 +1,7 @@
 package dev.wolfieboy09.mek_x_star.datagen;
 
 import dev.wolfieboy09.mek_x_star.MekanismNorthStar;
-import dev.wolfieboy09.mek_x_star.datagen.recipes.MNRecipeDataProvider;
-import dev.wolfieboy09.mek_x_star.datagen.recipes.MNMechanicalCraftingGen;
-import dev.wolfieboy09.mek_x_star.datagen.recipes.MNCrushingGen;
-import dev.wolfieboy09.mek_x_star.datagen.recipes.MNMixingGen;
+import dev.wolfieboy09.mek_x_star.datagen.recipes.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -31,5 +28,6 @@ public class DataGeneration {
         event.addProvider(new MNCrushingGen(output, lookupProvider));
         event.addProvider(new MNMixingGen(output, lookupProvider));
         event.addProvider(new MNItemTagProvider(output, lookupProvider, blockTagsProvider.contentsGetter()));
+        event.addProvider(new MNSequencedCraftingGen(output, lookupProvider));
     }
 }
