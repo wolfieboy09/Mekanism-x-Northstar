@@ -1,11 +1,18 @@
 package dev.wolfieboy09.mek_x_star;
 
+import com.simibubi.create.AllEnchantments;
 import dev.wolfieboy09.mek_x_star.registries.MNCreativeModeTab;
 import dev.wolfieboy09.mek_x_star.registries.MNDataComponents;
 import dev.wolfieboy09.mek_x_star.registries.MNItems;
 import dev.wolfieboy09.mek_x_star.registries.MNModules;
 import mekanism.api.MekanismIMC;
+import mekanism.common.registries.MekanismItems;
+import net.minecraft.core.Holder;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.fml.event.lifecycle.InterModEnqueueEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.enchanting.GetEnchantmentLevelEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -27,6 +34,17 @@ public class MekanismNorthStar {
         MNCreativeModeTab.REGISTER.register(modEventBus);
 
         modEventBus.addListener(MekanismNorthStar::registerMekanismModules);
+        NeoForge.EVENT_BUS.addListener(MekanismNorthStar::bodyarmorExpansions);
+    }
+
+    public static void bodyarmorExpansions(GetEnchantmentLevelEvent event) {
+        ItemStack stack = event.getStack();
+        Holder<Enchantment> target = event.getTargetEnchant();
+        if (!stack.is(MekanismItems.MEKASUIT_BODYARMOR)
+                || (target == null || !target.is(AllEnchantments.CAPACITY))
+                || !stack.has(MNDataComponents.OXYGEN_EXPANSIONS)) return;
+
+        event.getEnchantments().set(target, stack.get(MNDataComponents.OXYGEN_EXPANSIONS));
     }
 
     public static void registerMekanismModules(InterModEnqueueEvent event) {
@@ -35,6 +53,6 @@ public class MekanismNorthStar {
                 MNModules.MODULE_SPACE_SUIT,
                 MNModules.MODULE_SPACE_SUIT_INSULATION);
 
-        MekanismIMC.addMekaSuitBodyarmorModules(MNModules.MODULE_OXYGEN_TANK);
+        MekanismIMC.addMekaSuitBodyarmorModules(MNModules.MODULE_OXYGEN_TANK, MNModules.MODULE_OXYGEN_TANK_EXPANSION);
     }
 }
