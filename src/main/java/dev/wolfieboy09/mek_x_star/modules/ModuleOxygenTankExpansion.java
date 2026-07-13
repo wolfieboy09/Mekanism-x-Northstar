@@ -1,30 +1,33 @@
 package dev.wolfieboy09.mek_x_star.modules;
 
-import com.lightning.northstar.content.NorthstarTags;
-import com.lightning.northstar.world.oxygen.NorthstarOxygen;
-import mekanism.api.gear.ICustomModule;
+import com.lightning.northstar.config.NorthstarConfigs;
+import com.simibubi.create.AllEnchantments;
+import mekanism.api.gear.EnchantmentBasedModule;
 import mekanism.api.gear.IModule;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.item.enchantment.Enchantment;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
-public class ModuleOxygenTankExpansion implements ICustomModule<ModuleOxygenTankExpansion> {
-    public static final String TAG = "oxygenTankExpansions";
-
+public class ModuleOxygenTankExpansion extends EnchantmentBasedModule<ModuleOxygenTankExpansion> {
     @Override
-    public void onAdded(IModule<ModuleOxygenTankExpansion> module, boolean first) {
-        module.getContainer().getOrCreateTag().putInt(TAG, module.getInstalledCount());
+    public void onRemoved(IModule<ModuleOxygenTankExpansion> module, boolean last) {
+        super.onRemoved(module, last);
+        CompoundTag tag = module.getContainer().getOrCreateTag();
+
+        if (tag.contains("Oxygen", 3)) {
+            tag.putInt("Oxygen", Math.min(tag.getInt("Oxygen"),
+                    NorthstarConfigs.server().spacesuitBaseOxygen.get()
+                            + NorthstarConfigs.server().spacesuitAdditionalOxygen.get()
+                            // module#getInstalledCount never reaches zero, therefor this silly workaround works
+                            * module.getContainer().getEnchantmentLevel(AllEnchantments.CAPACITY.get())));
+        }
     }
 
     @Override
-    public void onRemoved(IModule<ModuleOxygenTankExpansion> module, boolean last) {
-        CompoundTag tag = module.getContainer().getOrCreateTag();
-        tag.putInt(TAG, module.getInstalledCount());
-
-//        if (tag.contains(NorthstarTags.NorthstarItemTags.OXYGEN_SEALING.tag.location().toString())) {
-//
-//        }
-
+    public @NotNull Enchantment getEnchantment() {
+        return AllEnchantments.CAPACITY.get();
     }
 }
