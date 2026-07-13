@@ -9,6 +9,8 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.common.capabilities.CapabilityProvider;
+import net.minecraftforge.common.extensions.IForgeItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -16,7 +18,11 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ItemStack.class)
-public abstract class ItemTagMixin {
+public abstract class ItemStackMixin extends CapabilityProvider<ItemStack> implements IForgeItemStack {
+    protected ItemStackMixin(Class<ItemStack> baseClass) {
+        super(baseClass);
+    }
+
     @Unique
     private ItemStack mekanismXNorthstar$self() {
         return (ItemStack) (Object) this;
