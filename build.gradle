@@ -132,13 +132,13 @@ dependencies {
     runtimeOnly renamer.dependency("com.eliotlash.mclib:mclib:20")
 
     compileOnly renamer.dependency("mekanism:Mekanism:${mekanism_version}:api")
-    runtimeOnly renamer.dependency("mekanism:Mekanism:${mekanism_version}")
+    implementation renamer.dependency("mekanism:Mekanism:${mekanism_version}")
 
-    runtimeOnly renamer.dependency("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") //{ transitive = false }
+    implementation renamer.dependency("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") //{ transitive = false }
     implementation renamer.dependency("net.createmod.ponder:Ponder-Forge-${minecraft_version}:${ponder_version}")
 
     runtimeOnly renamer.dependency("dev.engine-room.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}")
-    runtimeOnly renamer.dependency("com.tterrag.registrate:Registrate:${registrate_version}")
+    implementation renamer.dependency("com.tterrag.registrate:Registrate:${registrate_version}")
 
     runtimeOnly renamer.dependency("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
 
