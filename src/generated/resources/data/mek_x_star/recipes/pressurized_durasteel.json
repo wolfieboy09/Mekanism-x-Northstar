@@ -7,7 +7,7 @@
   },
   "gasInput": {
     "amount": 100,
-    "gas": "mekanism:osmium"
+    "gas": "mekanism:lithium"
   },
   "itemInput": {
     "ingredient": {

@@ -83,7 +83,7 @@ public class MNRecipeDataProvider extends RecipeProvider {
         PressurizedReactionRecipeBuilder.reaction(
                 IngredientCreatorAccess.item().from(MNItemTags.DURASTEEL_INGOT),
                 IngredientCreatorAccess.fluid().from(NorthstarTags.NorthstarFluidTags.C_TITANIUM_TETRACHLORIDE.tag, 50),
-                IngredientCreatorAccess.gas().from(MekanismGases.OSMIUM.get(), 100),
+                IngredientCreatorAccess.gas().from(MekanismGases.LITHIUM.get(), 100),
                 100,
                 new ItemStack(MNItems.PRESSURIZED_DURASTEEL.get())
         ).build(writer, ResourceLocation.fromNamespaceAndPath(MekanismNorthStar.MOD_ID, "pressurized_durasteel"));
