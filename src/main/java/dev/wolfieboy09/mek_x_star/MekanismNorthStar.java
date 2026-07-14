@@ -1,6 +1,7 @@
 package dev.wolfieboy09.mek_x_star;
 
 import com.mojang.logging.LogUtils;
+import dev.wolfieboy09.mek_x_star.datagen.DataGeneration;
 import dev.wolfieboy09.mek_x_star.registries.CreativeModTab;
 import dev.wolfieboy09.mek_x_star.registries.MNItems;
 import dev.wolfieboy09.mek_x_star.registries.MNModules;
@@ -26,6 +27,8 @@ public class MekanismNorthStar {
         CreativeModTab.TAB.register(modEventBus);
         MNModules.MODULES.register(modEventBus);
         LOGGER.info("Space! Space! Space! WE GOTTA CREATE SPACE!!!!");
+
+        modEventBus.addListener(DataGeneration::gatherData);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {}
