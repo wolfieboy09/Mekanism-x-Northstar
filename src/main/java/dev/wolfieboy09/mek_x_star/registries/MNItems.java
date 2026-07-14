@@ -20,6 +20,9 @@ public class MNItems {
     // ITEMS
     public static final RegistryObject<Item> INSULATION = ITEMS.register("insulation",() -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> HEAT_INSULATION = ITEMS.register("heat_insulation",() -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DURASTEEL = ITEMS.register("durasteel",() -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PRESSURIZED_DURASTEEL = ITEMS.register("pressurized_durasteel",() -> new Item(new Item.Properties()));
+
 
     public static final RegistryObject<Item> CRUSHED_WOOL = ITEMS.register("crushed_wool",() -> new Item(new Item.Properties()));
 }

@@ -25,6 +25,8 @@ public class CreativeModTab {
                         output.accept(MNItems.INSULATION.get());
                         output.accept(MNItems.HEAT_INSULATION.get());
                         output.accept(MNItems.CRUSHED_WOOL.get());
+                        output.accept(MNItems.DURASTEEL.get());
+                        output.accept(MNItems.PRESSURIZED_DURASTEEL.get());
                     })
                     .build());
 }
