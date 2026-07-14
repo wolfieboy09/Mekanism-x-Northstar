@@ -1,0 +1,36 @@
+package dev.wolfieboy09.mek_x_star.datagen;
+
+import dev.wolfieboy09.mek_x_star.MekanismNorthStar;
+import dev.wolfieboy09.mek_x_star.registries.MNItems;
+import dev.wolfieboy09.mek_x_star.tags.MNItemTags;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.Nullable;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.concurrent.CompletableFuture;
+
+@ParametersAreNonnullByDefault
+public class MNItemTagProvider extends ItemTagsProvider {
+    public MNItemTagProvider(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pLookupProvider, CompletableFuture<TagLookup<Block>> pBlockTags, @Nullable ExistingFileHelper existingFileHelper) {
+        super(pOutput, pLookupProvider, pBlockTags, MekanismNorthStar.MOD_ID, existingFileHelper);
+    }
+
+    @Override
+    protected void addTags(HolderLookup.Provider pProvider) {
+        tag(MNItemTags.HEAT_RESISTIVE)
+                .add(MNItems.HEAT_INSULATION.get());
+
+        tag(MNItemTags.INSULATING)
+                .add(MNItems.INSULATION.get());
+
+        tag(MNItemTags.CRUSHED_WOOL)
+                .add(MNItems.CRUSHED_WOOL.get());
+
+        tag(MNItemTags.DURASTEEL_INGOT)
+                .add(MNItems.DURASTEEL.get());
+    }
+}

@@ -23,6 +23,8 @@ public class MNItems {
     public static final RegistryObject<Item> DURASTEEL = ITEMS.register("durasteel",() -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PRESSURIZED_DURASTEEL = ITEMS.register("pressurized_durasteel",() -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> INCOMPLETE_OXYGEN_TANK_EXPANSION_MODULE = ITEMS.register("incomplete_oxygen_tank_expansion",() -> new Item(new Item.Properties()));
+
 
     public static final RegistryObject<Item> CRUSHED_WOOL = ITEMS.register("crushed_wool",() -> new Item(new Item.Properties()));
 }
