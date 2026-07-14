@@ -1,0 +1,15 @@
+{
+  "type": "mekanism:metallurgic_infusing",
+  "chemicalInput": {
+    "amount": 40,
+    "tag": "mekanism:carbon"
+  },
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ingots/steel"
+    }
+  },
+  "output": {
+    "item": "mek_x_star:durasteel"
+  }
+}

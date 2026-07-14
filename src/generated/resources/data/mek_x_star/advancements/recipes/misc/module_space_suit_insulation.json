@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_insulation": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "mek_x_star:insulating"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mek_x_star:module_space_suit_insulation"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_insulation",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mek_x_star:module_space_suit_insulation"
+    ]
+  },
+  "sends_telemetry_event": false
+}

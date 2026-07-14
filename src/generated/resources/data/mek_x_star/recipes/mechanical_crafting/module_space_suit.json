@@ -1,0 +1,36 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "A": {
+      "tag": "mekanism:alloys/atomic"
+    },
+    "C": {
+      "tag": "forge:circuits/ultimate"
+    },
+    "I": {
+      "tag": "mek_x_star:insulating"
+    },
+    "L": {
+      "tag": "forge:gems/sapphire"
+    },
+    "M": {
+      "item": "mekanism:module_base"
+    },
+    "P": {
+      "tag": "forge:plates/iron"
+    },
+    "S": {
+      "item": "mekanism:hdpe_sheet"
+    }
+  },
+  "pattern": [
+    "AIIIA",
+    "CSMSC",
+    "PLILP",
+    "SSSSS"
+  ],
+  "result": {
+    "item": "mek_x_star:module_space_suit"
+  }
+}

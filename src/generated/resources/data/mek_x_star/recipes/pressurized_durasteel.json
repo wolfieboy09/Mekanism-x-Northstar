@@ -1,0 +1,20 @@
+{
+  "type": "mekanism:reaction",
+  "duration": 100,
+  "fluidInput": {
+    "amount": 50,
+    "tag": "forge:titanium_tetrachloride"
+  },
+  "gasInput": {
+    "amount": 100,
+    "gas": "mekanism:osmium"
+  },
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ingot/durasteel"
+    }
+  },
+  "itemOutput": {
+    "item": "mek_x_star:pressurized_durasteel"
+  }
+}
