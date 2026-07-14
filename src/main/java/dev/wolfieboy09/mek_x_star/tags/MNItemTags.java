@@ -22,7 +22,7 @@ public class MNItemTags {
     }
 
     private static @NotNull TagKey<Item> commonTag(String path) {
-        return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", path));
+        return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("forge", path));
     }
 
     private static @NotNull TagKey<Item> minecraftTag(String path) {
