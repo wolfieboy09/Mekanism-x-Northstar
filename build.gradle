@@ -15,16 +15,17 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 renamer.enableMixinRefmaps {
     config("${mod_id}.mixins.json")
-//    source(sourceSets["main"]) {
-//        refMap = "${mod_id}.refmap.json"
-//    }
-//    source(sourceSets["test"]) {
-//        refMap = "${mod_id}.refmap.json"
-//    }
+    source(sourceSets.main) {
+        refMap = "${mod_id}.refmap.json"
+    }
+    source(sourceSets.test) {
+        refMap = "${mod_id}.refmap.json"
+    }
+    jar(tasks.named("jar", Jar))
 }
-//minecraft.runs.configureEach {
-//    renamer.mixin.run(this)
-//}
+minecraft.runs.configureEach {
+    renamer.mixin.run(it)
+}
 
 println "Java: ${providers.systemProperty('java.version').get()}, " +
         "JVM: ${providers.systemProperty('java.vm.version').get()} (${providers.systemProperty('java.vendor').get()}), " +

@@ -4,7 +4,7 @@
   "priority": 10,
   "package": "dev.wolfieboy09.mek_x_star.mixins",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "main.refmap.json",
+  "refmap": "mek_x_star.refmap.json",
   "mixins": [
     "ItemStackMixin"
   ],

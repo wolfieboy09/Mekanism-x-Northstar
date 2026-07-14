@@ -13,7 +13,7 @@ import static dev.wolfieboy09.mek_x_star.MekanismNorthStar.MOD_ID;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = MOD_ID)
 public class CreativeModTab {
     public static final DeferredRegister<CreativeModeTab> TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
-    public static final RegistryObject<CreativeModeTab> BLOCKS = TAB.register("blocks",
+    public static final RegistryObject<CreativeModeTab> ITEMS = TAB.register("items",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MNItems.MODULE_SPACE_SUIT.get()))
                     .title(Component.translatable("creativetab.mek_x_star.name"))
                     .displayItems((pParameters, output) -> {
