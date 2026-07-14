@@ -28,6 +28,7 @@ public class MekanismNorthStar {
         MNModules.MODULES.register(modEventBus);
         LOGGER.info("Space! Space! Space! WE GOTTA CREATE SPACE!!!!");
 
+        // Using Mod.EventBusSubscriber failed to work, so this was the Band-Aid solution
         modEventBus.addListener(DataGeneration::gatherData);
     }
 
